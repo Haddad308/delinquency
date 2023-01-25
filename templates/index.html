@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <!-- real -->
+    <link rel="stylesheet" href="{{url_for('static', filename = "css/master.css")}}">
+    <!-- test -->
+    <!-- <link rel="stylesheet" href="master.css"> -->
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!--<title>Responsive Regisration Form </title>-->
+    <script type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <form id="form" action="/data" method="post">
+            <div class="form first">
+
+                <div class="details personal  bg-white">
+                    <header>Registration</header>
+
+                    <span class="title">Personal Information</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input required type="text" name="name" placeholder="Enter your name">
+                        </div>
+                        <div class="input-field">
+                            <label>Address</label>
+                            <input required type="text" name="address" placeholder="Enter your Address">
+                        </div>
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input required type="text" name="email" placeholder="Enter your email">
+                        </div>
+
+
+                        <!-- <div class="input-field" >
+                    </div> -->
+
+                    </div>
+                </div>
+
+                <!-- <button type="submit" class="nextBtn">
+                    <span class="btnText">Submit</span>
+                    <i class="uil uil-navigator"></i>
+                </button> -->
+
+                <h3 class="error">error</h3>
+            </div>
+
+            <!-- <div class="input-field">
+                            
+                <input required type="checkbox" name="che" placeholder="Enter your email" >
+            </div>       -->
+
+            <div class="second">
+                <div class="connect">
+                    <h4>Connect to my Data</h4>
+                    <div> <span>Check All</span> <input type="checkbox" onchange="checkAll(this)" name="" id=""
+                            value="Select All"></div>
+                </div>
+                <div class="images">
+                    <input type="checkbox" name="chk" id="" value="BankAccount">
+                    <div class="img">
+                        <img src= {{ url_for('static', filename = 'css/images/6.png') }} >
+                        <p>Bank Account</p>"
+                    </div>
+                    <input type="checkbox" name="chk" id="" value="Loans">
+
+                    <div class="img">
+                        <img src={{ url_for('static', filename = 'css/images/5.png') }} />
+                        <p>Loans</p>
+
+                    </div>
+                    <input type="checkbox" name="chk" id="" value="CreditReports">
+
+                    <div class="img">
+                        <img src={{ url_for('static', filename = 'css/images/7.png') }} />
+                        <p>Credit Reports</p>
+
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="nextBtn">
+                <span class="btnText">Submit</span>
+                <i class="uil uil-navigator"></i>
+            </button>
+
+        </form>
+
+        <div id="data">
+
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename = 'scripts.js') }}" ></script>
+</body>
+
+</html>

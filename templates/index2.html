@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="{{url_for('static', filename = "css/style.css")}}">
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--<title>Responsive Regisration Form </title>--> 
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form id="form" action="/data/prediction" method="post" >
+            <div class="form first">              
+                <div class="details ID">
+                    <span class="title">Employment and Income Information</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label>Job Title</label>
+                            <select name="JobTitle"  required>
+                                <option disabled   >Select Job Title</option>
+                                <option value="Architect">Architect</option>
+                                <option value="Developer">Developer</option>
+                                <option value="Doctor">Doctor</option>
+                                <option value="Entrepreneur">Entrepreneur</option>
+                                <option value="Journalist">Journalist</option>
+                                <option value="Lawyer">Lawyer</option>
+                                <option value="Manager">Manager</option>
+                                <option value="Mechanic">Mechanic</option>
+                                <option value="Media_Manager">Media_Manager</option>
+                                <option value="Musician">Musician</option>
+                                <option value="Scientist">Scientist</option>
+                                <option value="Teacher">Teacher</option>
+                                <option value="Writer">Writer</option>
+                                <option value="Accountant">Accountant</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Annual Income</label>
+                            <input value="19114" required type="number" name="annual_income" placeholder="Enter your Annual Income" >
+                        </div>
+                    
+                        <div class="input-field">
+                            <label>Monthly Inhand Salary</label>
+                            <input value="1500" required type="number" name="monthly_inhand_salary" placeholder="Enter your Monthly Salary" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Num Bank Accounts</label>
+                            <input required value="3" type="number" name="num_bank_accounts" placeholder="Enter your Num Bank Accounts" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Num Credit Card</label>
+                            <input value="4" required type="number" name="num_credit_card" placeholder="Enter your Num_Credit_Card" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Interest Rate</label>
+                            <input value="3" required type="number" name="interest_rate" placeholder="Enter your Interest_Rate" >
+                        </div>
+
+
+                        <div class="input-field">
+                            <label>Num of Delayed Payment</label>
+                            <input value="8" required type="number" name="num_of_delayed_payment" placeholder="Enter Num of Delayed Payment" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Changed Credit Limit</label>
+                            <input value="9" required type="number" name="changed_credit_limit" placeholder="Enter Changed_Credit_Limit" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Num Credit Inquiries</label>
+                            <input value="4" required type="number" name="num_credit_inquiries" placeholder="Enter Num Credit Inquiries" >
+                        </div>
+                    
+
+                        <div class="input-field">
+                            <label>Credit Mix</label>
+                            <input value="3" required type="number" name="credit_mix" placeholder="Enter Credit Mix" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Credit Utilization Ratio</label>
+                            <input value="27" required type="number" name="credit_utilization_ratio" placeholder="Enter Credit Utilization Ratio" >
+                        </div>
+                        
+
+                        <div class="input-field">
+                            <label>Credit History Age</label>
+                            <input value="270" required type="number" name="credit_history_age" placeholder="Enter Credit_History_Age" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Total EMI per month</label>
+                            <input  value="49" required type="number" name="Total_EMI_per_month" placeholder="Enter Total EMI per month" >
+                        </div>
+                        
+                        
+
+                        <div class="input-field">
+                            <label>Payment of Min Amount</label>
+                            <select name = "MinAmount"  required >
+                                <option disabled >Select Payment of Min Amount</option>
+                                <option value="Yes" >Yes</option>
+                                <option value="No" >No</option>                                
+                            </select>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Payment Behavior</label>
+                            <select name="Behavior" required >
+                                <option disabled  >Select Payment Behavior</option>
+                                <option value="High spent Medium value payments" >High spent Medium value payments</option>
+                                <option value="High spent Small value payments" >High spent Small value payments</option>
+                                <option value="Low spent Large value payments" >Low spent Large value payments</option>
+                                <option value="Low spent Medium value payments" >Low spent Medium value payments</option>
+                                <option value="Low spent Medium value payments" >Low spent Medium value payments</option>
+                                <option value="High spent Large value payments" >High spent Large value payments</option>
+                            </select>
+                        </div>                                               
+                        </div> 
+                </div> 
+                
+                <div class="details ID">
+                    <span class="title">Loan Information</span>
+                
+                    <div class="fields">
+
+                        
+                        <div class="input-field">
+                            <label>Num of Loan</label>
+                            <input required value="4"  type="number" name="Num_of_Loan" placeholder="Enter your Num of Loan" >
+                        </div>
+                        <div class="input-field">
+                            <label>Loan To Debt</label>
+                            <input required value="809"  type="number" name="Loan_To_Debt" placeholder="Enter your Loan To Debt" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Amount invested monthly</label>
+                            <input required value="62" type="number" name="Amount_invested_monthly" placeholder="Enter your Amount invested" >
+                        </div>
+
+                        <div class="input-field" >
+                            <label>Monthly Balance</label>
+                            <input  required value="340" type="number" name="Monthly_Balance" placeholder="Enter your Monthly Balance" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Delay from due date</label>
+                            <input required value="8" type="number" name="Delay_from_due_date" placeholder="Enter your Delay from due date" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Loan to income</label>
+                            <input required value="4" type="number" name="Loan_to_income" placeholder="Enter your Loan to income" >
+                        </div>                        
+                        <div class="input-field">
+                            <label>Type of Loan</label>
+                            <select  name="TypeofLoan" required >
+                                <option disabled   >Select Type of Loan</option>
+                                <option value="Credit Builder" >Credit Builder</option>
+                                <option value="Personal Loan" >Personal Loan</option>
+                                <option value="Debt Consolidation" >Debt Consolidation</option>
+                                <option value="Student" >Student</option>
+                                <option value="Payday" >Payday</option>
+                                <option value="Mortgage" >Mortgage</option>
+                                <option value="Auto" >Auto</option>
+                                <option value="Home Equity" >Home Equity</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Month will start to pay for the loan</label>
+                            <select  name="Month" required >
+                                <option disabled  >Select Month</option>
+                                <option value="January" >January</option>
+                                <option value="February" >February</option>
+                                <option value="March" >March</option>
+                                <option value="April" >April</option>
+                                <option value="May" >May</option>
+                                <option value="June" >June</option>
+                                <option value="August" >August</option>                                
+                            </select>
+                        </div>
+
+                        <div class="input-field" >
+
+                        </div>
+
+                    </div>
+                    
+                    <button type="submit" class="nextBtn">
+                        <span class="btnText">Predict</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                    
+                </div> 
+                
+                <h3 class="error">error</h3>
+            </div>          
+        </form>        
+        <div id="data">
+            
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
